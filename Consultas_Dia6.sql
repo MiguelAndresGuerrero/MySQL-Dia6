@@ -2,150 +2,106 @@ create database AutoRental;
 
 use AutoRental;
 
-create table sucursal (
-	id_sucursal int primary key auto_increment,
-    ciudad varchar(20),
-    direccion varchar(40),
-    telefono_fijo varchar(20),
-    celular int(10),
-    correo_electronico varchar(60)
-);
-
-INSERT INTO sucursal (ciudad, direccion, telefono_fijo, celular, correo_electronico) VALUES
-('Cúcuta', 'Calle 1 #10-20', '072-5550001', '3005550001', 'sucursal1@empresa.com'),
-('Bogotá', 'Carrera 2 #20-30', '072-5550002', '3005550002', 'sucursal2@empresa.com'),
-('Medellín', 'Calle 3 #30-40', '072-5550003', '3005550003', 'sucursal3@empresa.com'),
-('Cali', 'Calle 4 #40-50', '072-5550004', '3005550004', 'sucursal4@empresa.com'),
-('Barranquilla', 'Calle 5 #50-60', '072-5550005', '3005550005', 'sucursal5@empresa.com'),
-('Cartagena', 'Calle 6 #60-70', '072-5550006', '3005550006', 'sucursal6@empresa.com'),
-('Bucaramanga', 'Calle 7 #70-80', '072-5550007', '3005550007', 'sucursal7@empresa.com'),
-('Pereira', 'Calle 8 #80-90', '072-5550008', '3005550008', 'sucursal8@empresa.com'),
-('Santa Marta', 'Calle 9 #90-100', '072-5550009', '3005550009', 'sucursal9@empresa.com'),
-('Ibagué', 'Calle 10 #100-110', '072-5550010', '3005550010', 'sucursal10@empresa.com'),
-('Neiva', 'Calle 11 #110-120', '072-5550011', '3005550011', 'sucursal11@empresa.com'),
-('Armenia', 'Calle 12 #120-130', '072-5550012', '3005550012', 'sucursal12@empresa.com'),
-('Pasto', 'Calle 13 #130-140', '072-5550013', '3005550013', 'sucursal13@empresa.com'),
-('Manizales', 'Calle 14 #140-150', '072-5550014', '3005550014', 'sucursal14@empresa.com'),
-('Cúcuta', 'Calle 15 #150-160', '072-5550015', '3005550015', 'sucursal15@empresa.com'),
-('Villavicencio', 'Calle 16 #160-170', '072-5550016', '3005550016', 'sucursal16@empresa.com'),
-('Soledad', 'Calle 17 #170-180', '072-5550017', '3005550017', 'sucursal17@empresa.com'),
-('Palmira', 'Calle 18 #180-190', '072-5550018', '3005550018', 'sucursal18@empresa.com'),
-('Valledupar', 'Calle 19 #190-200', '072-5550019', '3005550019', 'sucursal19@empresa.com'),
-('Montería', 'Calle 20 #200-210', '072-5550020', '3005550020', 'sucursal20@empresa.com'),
-('San Andrés', 'Calle 21 #210-220', '072-5550021', '3005550021', 'sucursal21@empresa.com'),
-('Popayán', 'Calle 22 #220-230', '072-5550022', '3005550022', 'sucursal22@empresa.com'),
-('Tuluá', 'Calle 23 #230-240', '072-5550023', '3005550023', 'sucursal23@empresa.com'),
-('Cúcuta', 'Calle 24 #240-250', '072-5550024', '3005550024', 'sucursal24@empresa.com'),
-('Bello', 'Calle 25 #250-260', '072-5550025', '3005550025', 'sucursal25@empresa.com'),
-('Tunja', 'Calle 26 #260-270', '072-5550026', '3005550026', 'sucursal26@empresa.com'),
-('Pereira', 'Calle 27 #270-280', '072-5550027', '3005550027', 'sucursal27@empresa.com'),
-('La Dorada', 'Calle 28 #280-290', '072-5550028', '3005550028', 'sucursal28@empresa.com'),
-('Bucaramanga', 'Calle 29 #290-300', '072-5550029', '3005550029', 'sucursal29@empresa.com'),
-('Cali', 'Calle 30 #300-310', '072-5550030', '3005550030', 'sucursal30@empresa.com'),
-('Valledupar', 'Calle 31 #310-320', '072-5550031', '3005550031', 'sucursal31@empresa.com'),
-('Cartagena', 'Calle 32 #320-330', '072-5550032', '3005550032', 'sucursal32@empresa.com'),
-('Cali', 'Calle 33 #330-340', '072-5550033', '3005550033', 'sucursal33@empresa.com'),
-('Santa Marta', 'Calle 34 #340-350', '072-5550034', '3005550034', 'sucursal34@empresa.com'),
-('Villavicencio', 'Calle 35 #350-360', '072-5550035', '3005550035', 'sucursal35@empresa.com'),
-('San Andrés', 'Calle 36 #360-370', '072-5550036', '3005550036', 'sucursal36@empresa.com'),
-('Quibdó', 'Calle 37 #370-380', '072-5550037', '3005550037', 'sucursal37@empresa.com'),
-('Neiva', 'Calle 38 #380-390', '072-5550038', '3005550038', 'sucursal38@empresa.com'),
-('San Juan de Pasto', 'Calle 39 #390-400', '072-5550039', '3005550039', 'sucursal39@empresa.com'),
-('Tunja', 'Calle 40 #400-410', '072-5550040', '3005550040', 'sucursal40@empresa.com'),
-('Cúcuta', 'Calle 41 #410-420', '072-5550041', '3005550041', 'sucursal41@empresa.com'),
-('Popayán', 'Calle 42 #420-430', '072-5550042', '3005550042', 'sucursal42@empresa.com'),
-('Cali', 'Calle 43 #430-440', '072-5550043', '3005550043', 'sucursal43@empresa.com'),
-('Barranquilla', 'Calle 44 #440-450', '072-5550044', '3005550044', 'sucursal44@empresa.com'),
-('Tuluá', 'Calle 45 #450-460', '072-5550045', '3005550045', 'sucursal45@empresa.com'),
-('Ibagué', 'Calle 46 #460-470', '072-5550046', '3005550046', 'sucursal46@empresa.com'),
-('San Gil', 'Calle 47 #470-480', '072-5550047', '3005550047', 'sucursal47@empresa.com'),
-('Bello', 'Calle 48 #480-490', '072-5550048', '3005550048', 'sucursal48@empresa.com'),
-('Girardot', 'Calle 49 #490-500', '072-5550049', '3005550049', 'sucursal49@empresa.com'),
-('Barranquilla', 'Calle 50 #500-510', '072-5550050', '3005550050', 'sucursal50@empresa.com'),
-('Cúcuta', 'Calle 51 #510-520', '072-5550051', '3005550051', 'sucursal51@empresa.com'),
-('Medellín', 'Calle 52 #520-530', '072-5550052', '3005550052', 'sucursal52@empresa.com'),
-('Cali', 'Calle 53 #530-540', '072-5550053', '3005550053', 'sucursal53@empresa.com'),
-('Barranquilla', 'Calle 54 #540-550', '072-5550054', '3005550054', 'sucursal54@empresa.com'),
-('Cartagena', 'Calle 55 #550-560', '072-5550055', '3005550055', 'sucursal55@empresa.com'),
-('Bucaramanga', 'Calle 56 #560-570', '072-5550056', '3005550056', 'sucursal56@empresa.com'),
-('Pereira', 'Calle 57 #570-580', '072-5550057', '3005550057', 'sucursal57@empresa.com'),
-('Santa Marta', 'Calle 58 #580-590', '072-5550058', '3005550058', 'sucursal58@empresa.com'),
-('Ibagué', 'Calle 59 #590-600', '072-5550059', '3005550059', 'sucursal59@empresa.com'),
-('Neiva', 'Calle 60 #600-610', '072-5550060', '3005550060', 'sucursal60@empresa.com'),
-('Armenia', 'Calle 61 #610-620', '072-5550061', '3005550061', 'sucursal61@empresa.com'),
-('Pasto', 'Calle 62 #620-630', '072-5550062', '3005550062', 'sucursal62@empresa.com'),
-('Manizales', 'Calle 63 #630-640', '072-5550063', '3005550063', 'sucursal63@empresa.com'),
-('Cúcuta', 'Calle 64 #640-650', '072-5550064', '3005550064', 'sucursal64@empresa.com'),
-('Villavicencio', 'Calle 65 #650-660', '072-5550065', '3005550065', 'sucursal65@empresa.com'),
-('Soledad', 'Calle 66 #660-670', '072-5550066', '3005550066', 'sucursal66@empresa.com'),
-('Palmira', 'Calle 67 #670-680', '072-5550067', '3005550067', 'sucursal67@empresa.com'),
-('Valledupar', 'Calle 68 #680-690', '072-5550068', '3005550068', 'sucursal68@empresa.com'),
-('Montería', 'Calle 69 #690-700', '072-5550069', '3005550069', 'sucursal69@empresa.com'),
-('San Andrés', 'Calle 70 #700-710', '072-5550070', '3005550070', 'sucursal70@empresa.com'),
-('Popayán', 'Calle 71 #710-720', '072-5550071', '3005550071', 'sucursal71@empresa.com'),
-('Tuluá', 'Calle 72 #720-730', '072-5550072', '3005550072', 'sucursal72@empresa.com'),
-('Cúcuta', 'Calle 73 #730-740', '072-5550073', '3005550073', 'sucursal73@empresa.com'),
-('Bello', 'Calle 74 #740-750', '072-5550074', '3005550074', 'sucursal74@empresa.com'),
-('Tunja', 'Calle 75 #750-760', '072-5550075', '3005550075', 'sucursal75@empresa.com'),
-('Pereira', 'Calle 76 #760-770', '072-5550076', '3005550076', 'sucursal76@empresa.com'),
-('La Dorada', 'Calle 77 #770-780', '072-5550077', '3005550077', 'sucursal77@empresa.com'),
-('Bucaramanga', 'Calle 78 #780-790', '072-5550078', '3005550078', 'sucursal78@empresa.com'),
-('Cali', 'Calle 79 #790-800', '072-5550079', '3005550079', 'sucursal79@empresa.com'),
-('Valledupar', 'Calle 80 #800-810', '072-5550080', '3005550080', 'sucursal80@empresa.com'),
-('Cartagena', 'Calle 81 #810-820', '072-5550081', '3005550081', 'sucursal81@empresa.com'),
-('Cali', 'Calle 82 #820-830', '072-5550082', '3005550082', 'sucursal82@empresa.com'),
-('Santa Marta', 'Calle 83 #830-840', '072-5550083', '3005550083', 'sucursal83@empresa.com'),
-('Villavicencio', 'Calle 84 #840-850', '072-5550084', '3005550084', 'sucursal84@empresa.com'),
-('San Andrés', 'Calle 85 #850-860', '072-5550085', '3005550085', 'sucursal85@empresa.com'),
-('Quibdó', 'Calle 86 #860-870', '072-5550086', '3005550086', 'sucursal86@empresa.com'),
-('Neiva', 'Calle 87 #870-880', '072-5550087', '3005550087', 'sucursal87@empresa.com'),
-('San Juan de Pasto', 'Calle 88 #880-890', '072-5550088', '3005550088', 'sucursal88@empresa.com'),
-('Tunja', 'Calle 89 #890-900', '072-5550089', '3005550089', 'sucursal89@empresa.com'),
-('Cúcuta', 'Calle 90 #900-910', '072-5550090', '3005550090', 'sucursal90@empresa.com'),
-('Popayán', 'Calle 91 #910-920', '072-5550091', '3005550091', 'sucursal91@empresa.com'),
-('Cali', 'Calle 92 #920-930', '072-5550092', '3005550092', 'sucursal92@empresa.com'),
-('Barranquilla', 'Calle 93 #930-940', '072-5550093', '3005550093', 'sucursal93@empresa.com'),
-('Tuluá', 'Calle 94 #940-950', '072-5550094', '3005550094', 'sucursal94@empresa.com'),
-('Ibagué', 'Calle 95 #950-960', '072-5550095', '3005550095', 'sucursal95@empresa.com'),
-('San Gil', 'Calle 96 #960-970', '072-5550096', '3005550096', 'sucursal96@empresa.com'),
-('Bello', 'Calle 97 #970-980', '072-5550097', '3005550097', 'sucursal97@empresa.com'),
-('Girardot', 'Calle 98 #980-990', '072-5550098', '3005550098', 'sucursal98@empresa.com'),
-('Barranquilla', 'Calle 99 #990-1000', '072-5550099', '3005550099', 'sucursal99@empresa.com'),
-('Medellín', 'Calle 100 #1000-1010', '072-5550100', '3005550100', 'sucursal100@empresa.com');
-
 create table empleado (
 	id_empleado int primary key auto_increment,
-    cedula int(10),
-    nombre varchar(20),
-    apellido varchar(20),
+    cedula int(15),
+    nombre varchar(30),
+    apellido varchar(30),
     direccion varchar(60),
-    ciudad_residencia varchar(20),
-    celular int(20),
-    correo_electronico varchar(60)
+    ciudad_residencia varchar(30),
+    celular varchar(20),
+    correo_electronico varchar(100)
 );
 
 create table cliente (
 	id_cliente int primary key auto_increment,
-    cedula int(10),
-    nombre varchar(20),
-    apellido varchar(20),
+    cedula int(15),
+    nombre varchar(30),
+    apellido varchar(30),
     direccion varchar(60),
-	ciudad_residencia varchar(20),
-    celular int(20),
-    correo_electronico varchar(60)
+	ciudad_residencia varchar(30),
+    celular varchar(30),
+    correo_electronico varchar(100)
 );
 
 create table vehiculos (
 	id_vehiculos int primary key auto_increment,
     tipo_vehiculo varchar(20),
     placa varchar(10),
-    referencia varchar(20),
+    referencia varchar(40),
     modelo int(10),
     puertas varchar(20),
-    capacidad int(2),
-    sunroof varchar(20),
+    capacidad int(10),
+    sunroof varchar(10),
     motor varchar(10),
     color varchar(20)
+);
+
+create table sucursal (
+	id_sucursal int primary key auto_increment,
+    ciudad varchar(30),
+    direccion varchar(60),
+    telefono_fijo varchar(20),
+    celular varchar(20),
+    correo_electronico varchar(100),
+    id_vehiculo int,
+    foreign key (id_vehiculo) references vehiculos(id_vehiculos)
+);
+
+create table alquileres (
+	id_alquiler int primary key auto_increment,
+    vehiculo varchar(40),
+    nombre_cliente varchar(40),
+    apellido_cliente varchar(40),
+    nombre_empleado varchar(40),
+    apellido_empleado varchar(40),
+    sucursal varchar(40),
+    fecha_salida varchar(20),
+    fecha_llegada varchar(20),
+    valor_alquiler int(30),
+    porcentaje_descuento int(40),
+    valor_cotizado int(20),
+    valor_pagado int(20),
+    id_cliente int,
+    id_sucursal int,
+    id_empleado int,
+    id_vehiculo int,
+    foreign key (id_cliente) references cliente(id_cliente),
+    foreign key (id_sucursal) references sucursal(id_sucursal),
+    foreign key (id_empleado) references empleado(id_empleado),
+    foreign key (id_vehiculo) references vehiculos(id_vehiculos)
+);
+
+create table sucursal_alquiler (
+	id_sucursal_alquiler int primary key auto_increment,
+    id_alquiler int,
+    id_sucursal int,
+    foreign key (id_alquiler) references alquileres(id_alquiler),
+    foreign key (id_sucursal) references sucursal(id_sucursal)
+);
+
+create table empleado_alquiler (
+	id_empleado_alquiler int primary key auto_increment,
+    id_empleado int,
+    id_alquiler int,
+    foreign key (id_empleado) references empleado(id_empleado),
+    foreign key (id_alquiler) references alquileres(id_alquiler)
+);
+
+create table alquiler_cliente (
+	id_alquiler_cliente int primary key auto_increment,
+    id_alquiler int,
+    id_cliente int,
+    foreign key (id_alquiler) references alquileres(id_alquiler),
+    foreign key (id_cliente) references cliente(id_cliente)
+);
+
+create table vehiculo_alquiler (
+	id_vehiculo_alquiler int primary key auto_increment,
+    id_alquiler int,
+    id_vehiculo int,
+    foreign key (id_alquiler) references alquileres(id_alquiler),
+    foreign key (id_vehiculo) references vehiculos(id_vehiculos)
 );
 
 INSERT INTO vehiculos (tipo_vehiculo, placa, referencia, modelo, puertas, capacidad, sunroof, motor, color) VALUES
@@ -215,22 +171,6 @@ INSERT INTO vehiculos (tipo_vehiculo, placa, referencia, modelo, puertas, capaci
 ('Sedán', 'BCD890', 'Nissan Maxima', 2021, 4, 5, 'No', '3.5L', 'Blanco'),
 ('SUV', 'EFG123', 'Honda HR-V', 2022, 5, 7, 'Sí', '1.8L', 'Gris'),
 ('Camioneta', 'HIJ456', 'Ford Super Duty', 2023, 4, 5, 'No', '6.7L', 'Negro');
-
-create table alquileres (
-	id_alquiler int primary key auto_increment,
-    vehiculo varchar(30),
-    nombre_cliente varchar(50),
-    apellido_cliente varchar(50),
-    nombre_empleado varchar(50),
-    apellido_empleado varchar(50),
-    sucursal varchar(40),
-    fecha_salida int(10),
-    fecha_llegada int(10),
-    valor_alquiler int(10),
-    porcentaje_descuento int(3),
-    valor_cotizado int(10),
-    valor_pagado int(10)
-);
 
 INSERT INTO cliente (cedula, nombre, apellido, direccion, ciudad_residencia, celular, correo_electronico) VALUES
 ('100000001', 'Juan', 'Gómez', 'Calle 1 #1-2', 'Cúcuta', '3001112233', 'carlos.gomez@cliente.com'),
@@ -474,3 +414,242 @@ INSERT INTO empleado (cedula, nombre, apellido, direccion, ciudad_residencia, ce
 ('10000098', 'Victoria', 'González', 'Calle 98 #108-118', 'Pasto', '3000000098', 'victoria.gonzalez98@example.com'),
 ('10000099', 'Andrés', 'Torres', 'Calle 99 #109-119', 'Popayán', '3000000099', 'andres.torres99@example.com'),
 ('10000100', 'Beatriz', 'Figueroa', 'Calle 100 #110-120', 'Ibagué', '3000000100', 'beatriz.figueroa100@example.com');
+
+INSERT INTO sucursal (ciudad, direccion, telefono_fijo, celular, correo_electronico) VALUES
+('Cúcuta', 'Calle 1 #10-20', '072-5550001', '3005550001', 'sucursal1@empresa.com'),
+('Bogotá', 'Carrera 2 #20-30', '072-5550002', '3005550002', 'sucursal2@empresa.com'),
+('Medellín', 'Calle 3 #30-40', '072-5550003', '3005550003', 'sucursal3@empresa.com'),
+('Cali', 'Calle 4 #40-50', '072-5550004', '3005550004', 'sucursal4@empresa.com'),
+('Barranquilla', 'Calle 5 #50-60', '072-5550005', '3005550005', 'sucursal5@empresa.com'),
+('Cartagena', 'Calle 6 #60-70', '072-5550006', '3005550006', 'sucursal6@empresa.com'),
+('Bucaramanga', 'Calle 7 #70-80', '072-5550007', '3005550007', 'sucursal7@empresa.com'),
+('Pereira', 'Calle 8 #80-90', '072-5550008', '3005550008', 'sucursal8@empresa.com'),
+('Santa Marta', 'Calle 9 #90-100', '072-5550009', '3005550009', 'sucursal9@empresa.com'),
+('Ibagué', 'Calle 10 #100-110', '072-5550010', '3005550010', 'sucursal10@empresa.com'),
+('Neiva', 'Calle 11 #110-120', '072-5550011', '3005550011', 'sucursal11@empresa.com'),
+('Armenia', 'Calle 12 #120-130', '072-5550012', '3005550012', 'sucursal12@empresa.com'),
+('Pasto', 'Calle 13 #130-140', '072-5550013', '3005550013', 'sucursal13@empresa.com'),
+('Manizales', 'Calle 14 #140-150', '072-5550014', '3005550014', 'sucursal14@empresa.com'),
+('Cúcuta', 'Calle 15 #150-160', '072-5550015', '3005550015', 'sucursal15@empresa.com'),
+('Villavicencio', 'Calle 16 #160-170', '072-5550016', '3005550016', 'sucursal16@empresa.com'),
+('Soledad', 'Calle 17 #170-180', '072-5550017', '3005550017', 'sucursal17@empresa.com'),
+('Palmira', 'Calle 18 #180-190', '072-5550018', '3005550018', 'sucursal18@empresa.com'),
+('Valledupar', 'Calle 19 #190-200', '072-5550019', '3005550019', 'sucursal19@empresa.com'),
+('Montería', 'Calle 20 #200-210', '072-5550020', '3005550020', 'sucursal20@empresa.com'),
+('San Andrés', 'Calle 21 #210-220', '072-5550021', '3005550021', 'sucursal21@empresa.com'),
+('Popayán', 'Calle 22 #220-230', '072-5550022', '3005550022', 'sucursal22@empresa.com'),
+('Tuluá', 'Calle 23 #230-240', '072-5550023', '3005550023', 'sucursal23@empresa.com'),
+('Cúcuta', 'Calle 24 #240-250', '072-5550024', '3005550024', 'sucursal24@empresa.com'),
+('Bello', 'Calle 25 #250-260', '072-5550025', '3005550025', 'sucursal25@empresa.com'),
+('Tunja', 'Calle 26 #260-270', '072-5550026', '3005550026', 'sucursal26@empresa.com'),
+('Pereira', 'Calle 27 #270-280', '072-5550027', '3005550027', 'sucursal27@empresa.com'),
+('La Dorada', 'Calle 28 #280-290', '072-5550028', '3005550028', 'sucursal28@empresa.com'),
+('Bucaramanga', 'Calle 29 #290-300', '072-5550029', '3005550029', 'sucursal29@empresa.com'),
+('Cali', 'Calle 30 #300-310', '072-5550030', '3005550030', 'sucursal30@empresa.com'),
+('Valledupar', 'Calle 31 #310-320', '072-5550031', '3005550031', 'sucursal31@empresa.com'),
+('Cartagena', 'Calle 32 #320-330', '072-5550032', '3005550032', 'sucursal32@empresa.com'),
+('Cali', 'Calle 33 #330-340', '072-5550033', '3005550033', 'sucursal33@empresa.com'),
+('Santa Marta', 'Calle 34 #340-350', '072-5550034', '3005550034', 'sucursal34@empresa.com'),
+('Villavicencio', 'Calle 35 #350-360', '072-5550035', '3005550035', 'sucursal35@empresa.com'),
+('San Andrés', 'Calle 36 #360-370', '072-5550036', '3005550036', 'sucursal36@empresa.com'),
+('Quibdó', 'Calle 37 #370-380', '072-5550037', '3005550037', 'sucursal37@empresa.com'),
+('Neiva', 'Calle 38 #380-390', '072-5550038', '3005550038', 'sucursal38@empresa.com'),
+('San Juan de Pasto', 'Calle 39 #390-400', '072-5550039', '3005550039', 'sucursal39@empresa.com'),
+('Tunja', 'Calle 40 #400-410', '072-5550040', '3005550040', 'sucursal40@empresa.com'),
+('Cúcuta', 'Calle 41 #410-420', '072-5550041', '3005550041', 'sucursal41@empresa.com'),
+('Popayán', 'Calle 42 #420-430', '072-5550042', '3005550042', 'sucursal42@empresa.com'),
+('Cali', 'Calle 43 #430-440', '072-5550043', '3005550043', 'sucursal43@empresa.com'),
+('Barranquilla', 'Calle 44 #440-450', '072-5550044', '3005550044', 'sucursal44@empresa.com'),
+('Tuluá', 'Calle 45 #450-460', '072-5550045', '3005550045', 'sucursal45@empresa.com'),
+('Ibagué', 'Calle 46 #460-470', '072-5550046', '3005550046', 'sucursal46@empresa.com'),
+('San Gil', 'Calle 47 #470-480', '072-5550047', '3005550047', 'sucursal47@empresa.com'),
+('Bello', 'Calle 48 #480-490', '072-5550048', '3005550048', 'sucursal48@empresa.com'),
+('Girardot', 'Calle 49 #490-500', '072-5550049', '3005550049', 'sucursal49@empresa.com'),
+('Barranquilla', 'Calle 50 #500-510', '072-5550050', '3005550050', 'sucursal50@empresa.com'),
+('Cúcuta', 'Calle 51 #510-520', '072-5550051', '3005550051', 'sucursal51@empresa.com'),
+('Medellín', 'Calle 52 #520-530', '072-5550052', '3005550052', 'sucursal52@empresa.com'),
+('Cali', 'Calle 53 #530-540', '072-5550053', '3005550053', 'sucursal53@empresa.com'),
+('Barranquilla', 'Calle 54 #540-550', '072-5550054', '3005550054', 'sucursal54@empresa.com'),
+('Cartagena', 'Calle 55 #550-560', '072-5550055', '3005550055', 'sucursal55@empresa.com'),
+('Bucaramanga', 'Calle 56 #560-570', '072-5550056', '3005550056', 'sucursal56@empresa.com'),
+('Pereira', 'Calle 57 #570-580', '072-5550057', '3005550057', 'sucursal57@empresa.com'),
+('Santa Marta', 'Calle 58 #580-590', '072-5550058', '3005550058', 'sucursal58@empresa.com'),
+('Ibagué', 'Calle 59 #590-600', '072-5550059', '3005550059', 'sucursal59@empresa.com'),
+('Neiva', 'Calle 60 #600-610', '072-5550060', '3005550060', 'sucursal60@empresa.com'),
+('Armenia', 'Calle 61 #610-620', '072-5550061', '3005550061', 'sucursal61@empresa.com'),
+('Pasto', 'Calle 62 #620-630', '072-5550062', '3005550062', 'sucursal62@empresa.com'),
+('Manizales', 'Calle 63 #630-640', '072-5550063', '3005550063', 'sucursal63@empresa.com'),
+('Cúcuta', 'Calle 64 #640-650', '072-5550064', '3005550064', 'sucursal64@empresa.com'),
+('Villavicencio', 'Calle 65 #650-660', '072-5550065', '3005550065', 'sucursal65@empresa.com'),
+('Soledad', 'Calle 66 #660-670', '072-5550066', '3005550066', 'sucursal66@empresa.com'),
+('Palmira', 'Calle 67 #670-680', '072-5550067', '3005550067', 'sucursal67@empresa.com'),
+('Valledupar', 'Calle 68 #680-690', '072-5550068', '3005550068', 'sucursal68@empresa.com'),
+('Montería', 'Calle 69 #690-700', '072-5550069', '3005550069', 'sucursal69@empresa.com'),
+('San Andrés', 'Calle 70 #700-710', '072-5550070', '3005550070', 'sucursal70@empresa.com'),
+('Popayán', 'Calle 71 #710-720', '072-5550071', '3005550071', 'sucursal71@empresa.com'),
+('Tuluá', 'Calle 72 #720-730', '072-5550072', '3005550072', 'sucursal72@empresa.com'),
+('Cúcuta', 'Calle 73 #730-740', '072-5550073', '3005550073', 'sucursal73@empresa.com'),
+('Bello', 'Calle 74 #740-750', '072-5550074', '3005550074', 'sucursal74@empresa.com'),
+('Tunja', 'Calle 75 #750-760', '072-5550075', '3005550075', 'sucursal75@empresa.com'),
+('Pereira', 'Calle 76 #760-770', '072-5550076', '3005550076', 'sucursal76@empresa.com'),
+('La Dorada', 'Calle 77 #770-780', '072-5550077', '3005550077', 'sucursal77@empresa.com'),
+('Bucaramanga', 'Calle 78 #780-790', '072-5550078', '3005550078', 'sucursal78@empresa.com'),
+('Cali', 'Calle 79 #790-800', '072-5550079', '3005550079', 'sucursal79@empresa.com'),
+('Valledupar', 'Calle 80 #800-810', '072-5550080', '3005550080', 'sucursal80@empresa.com'),
+('Cartagena', 'Calle 81 #810-820', '072-5550081', '3005550081', 'sucursal81@empresa.com'),
+('Cali', 'Calle 82 #820-830', '072-5550082', '3005550082', 'sucursal82@empresa.com'),
+('Santa Marta', 'Calle 83 #830-840', '072-5550083', '3005550083', 'sucursal83@empresa.com'),
+('Villavicencio', 'Calle 84 #840-850', '072-5550084', '3005550084', 'sucursal84@empresa.com'),
+('San Andrés', 'Calle 85 #850-860', '072-5550085', '3005550085', 'sucursal85@empresa.com'),
+('Quibdó', 'Calle 86 #860-870', '072-5550086', '3005550086', 'sucursal86@empresa.com'),
+('Neiva', 'Calle 87 #870-880', '072-5550087', '3005550087', 'sucursal87@empresa.com'),
+('San Juan de Pasto', 'Calle 88 #880-890', '072-5550088', '3005550088', 'sucursal88@empresa.com'),
+('Tunja', 'Calle 89 #890-900', '072-5550089', '3005550089', 'sucursal89@empresa.com'),
+('Cúcuta', 'Calle 90 #900-910', '072-5550090', '3005550090', 'sucursal90@empresa.com'),
+('Popayán', 'Calle 91 #910-920', '072-5550091', '3005550091', 'sucursal91@empresa.com'),
+('Cali', 'Calle 92 #920-930', '072-5550092', '3005550092', 'sucursal92@empresa.com'),
+('Barranquilla', 'Calle 93 #930-940', '072-5550093', '3005550093', 'sucursal93@empresa.com'),
+('Tuluá', 'Calle 94 #940-950', '072-5550094', '3005550094', 'sucursal94@empresa.com'),
+('Ibagué', 'Calle 95 #950-960', '072-5550095', '3005550095', 'sucursal95@empresa.com'),
+('San Gil', 'Calle 96 #960-970', '072-5550096', '3005550096', 'sucursal96@empresa.com'),
+('Bello', 'Calle 97 #970-980', '072-5550097', '3005550097', 'sucursal97@empresa.com'),
+('Girardot', 'Calle 98 #980-990', '072-5550098', '3005550098', 'sucursal98@empresa.com'),
+('Barranquilla', 'Calle 99 #990-1000', '072-5550099', '3005550099', 'sucursal99@empresa.com'),
+('Medellín', 'Calle 100 #1000-1010', '072-5550100', '3005550100', 'sucursal100@empresa.com');
+
+-- 1. Devuelva el nombre en una sola columna acopañado del numero de celular de todos los empleados
+select e.id_empleado,
+	concat(e.nombre,e.apellido) as nombre_completo,
+    e.celular
+from empleado e;
+
+-- 2. Devuelva el nombre de todos los empleados que son de barranquilla
+select empleado.id_empleado, empleado.nombre
+from empleado where ciudad_residencia = 'Barranquilla';
+
+-- 3. Devuelve el nombre, apellido, ciudad de residencia y el celular de los primeros 20 empleados
+select empleado.id_empleado,
+	empleado.nombre,
+    empleado.apellido,
+    empleado.ciudad_residencia,
+    empleado.celular
+from empleado limit 20;
+
+-- 4. Devuelve el nombre y la direccion de los ultimos 10 empleados
+select empleado.id_empleado id,
+	empleado.nombre nombre,
+    empleado.direccion direccion
+from empleado order by id desc limit 10;
+
+-- 5. Devuelve la informacion de contacto de todos los empleados(nombre, celular y correo electronico)
+select empleado.id_empleado,
+	empleado.nombre,
+    empleado.celular,
+    empleado.correo_electronico
+from empleado;
+
+-- 1. Devuleve el id, referencia, modelo, motor y el color de todos los vehiculos
+select vehiculos.id_vehiculos,
+	vehiculos.referencia,
+    vehiculos.modelo,
+    vehiculos.motor,
+    vehiculos.color
+from vehiculos;
+
+-- 2. Devuelve la capacidad de todos los vehiculos del 2020
+select vehiculos.id_vehiculos,
+	vehiculos.referencia,
+    vehiculos.modelo,
+    vehiculos.capacidad
+from vehiculos where modelo = '2020';
+
+-- 3. Devuelve el tipo de vehiculo, modelo, motor y el color de todos los vehiculos que tengan 5 puertas
+select vehiculos.tipo_vehiculo,
+	vehiculos.modelo,
+    vehiculos.motor,
+    vehiculos.color
+from vehiculos where puertas = '5';
+
+-- 4. Devuelve el tipo de vehiculo, placa del mismo y la refencia ordenando de forma ascendente
+select vehiculos.tipo_vehiculo,
+	vehiculos.placa,
+    vehiculos.referencia
+from vehiculos order by referencia asc;
+
+-- 5. Devuelve el numero total de los vehiculos que tienen 4 puertas
+select
+    vehiculos.puertas, 
+    count(puertas) as total_vehiculos
+from vehiculos where puertas = 4 group by 1;
+
+-- 1. Devuelve toas las sucursales que estan en barranquilla
+select sucursal.ciudad,
+	count(ciudad) as total_sucursales
+from sucursal where ciudad = 'Barranquilla';
+
+-- 2. Devuelve la ciudad, celular y el correo electronico de todas las sucursales que estan en Bucaramanga
+select sucursal.ciudad,
+	sucursal.celular,
+    sucursal.correo_electronico
+from sucursal where ciudad = 'Bucaramanga';
+
+-- 3. Devuleve la informacion de contacto de todas las sucursales de medellin
+select sucursal.ciudad,
+	sucursal.telefono_fijo,
+    sucursal.celular,
+    sucursal.correo_electronico
+from sucursal where ciudad = 'Medellin';
+
+-- 4. Devulve todas las sucursales ordenadas de forma ascendente
+select sucursal.ciudad,
+	sucursal.direccion,
+    sucursal.telefono_fijo,
+    sucursal.celular,
+    sucursal.correo_electronico
+from sucursal order by ciudad asc;
+
+-- 5. Devuelve el correo electronico, direccion y el telefono fijo de todas las sucursales de Cucuctá
+select sucursal.correo_electronico,
+	sucursal.direccion,
+    sucursal.telefono_fijo
+from sucursal where ciudad = 'Cucutá';
+	
+-- 1. Devuelve el nombre y apellido en una sola columna de los primeros 10 clientes
+select concat(cliente.nombre, cliente.apellido) as nombre_completo
+from cliente order by nombre_completo desc limit 10;
+
+-- 2. Devuelve el nombre de todos los clientes que son de Cali
+select * from cliente where ciudad_residencia = 'Cali';
+
+-- 3. Devuelve el numero total de clientes que son de Bello
+select cliente.ciudad_residencia, count(ciudad_residencia) as clientes from cliente where ciudad_residencia = 'Bello';
+
+-- 4. Devuelve toda la infromacion de contacto de todos los clientes que son de cucutá
+select cliente.nombre,
+	cliente.apellido,
+    cliente.ciudad_residencia,
+    cliente.celular,
+    cliente.correo_electronico
+from cliente where ciudad_residencia = 'Cucutá';
+
+-- 5. Devuelve el numero total de clientes que son de Pereira
+select cliente.ciudad_residencia, count(ciudad_residencia) as total_clientes from cliente where ciudad_residencia = 'Pereira';
+
+-- 1. Devuelve el nombre de los primeros 10 clientes que alquilaron sus vehiculos en la sucursal 1
+select alquileres.nombre_cliente from alquileres where sucursal = 'Sucursal 1' limit 10;
+
+-- 2. Devuelve el nombre, apellido del cliente y el nombre del empleado que le alquilaron vehiculos en la sucursal 4
+select alquileres.nombre_cliente, alquileres.apellido_cliente, alquileres.nombre_empleado, sucursal 
+from alquileres where sucursal = 'Sucursal 4';
+
+-- 3. Devuelve el nombre del cliente y los valores del alquiler de forma ascendente
+select alquileres.id_alquiler, alquileres.nombre_cliente, alquileres.valor_alquiler
+from alquileres order by valor_alquiler asc;
+
+-- 4. Devuelve el nombre, apellido y el valor pagado de forma descendiente
+select alquileres.nombre_cliente, alquileres.apellido_cliente, alquileres.valor_pagado
+from alquileres order by valor_pagado desc;
+
+-- 5. Devuelve el nombre, apellido, sucursal y la fecha de salida y llegada
+select alquileres.nombre_cliente, alquileres.apellido_cliente, alquileres.sucursal, alquileres.fecha_salida, alquileres.fecha_llegada
+from alquileres;

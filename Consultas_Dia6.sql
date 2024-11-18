@@ -653,3 +653,28 @@ from alquileres order by valor_pagado desc;
 -- 5. Devuelve el nombre, apellido, sucursal y la fecha de salida y llegada
 select alquileres.nombre_cliente, alquileres.apellido_cliente, alquileres.sucursal, alquileres.fecha_salida, alquileres.fecha_llegada
 from alquileres;
+
+-- 1. Crea una funcion que calcule el descuento del alquiler
+
+DELIMITER //
+
+create function calcular_descuento(valor_alquiler int, p_descuento int)
+returns int
+deterministic
+begin
+    declare descuento int;
+    set descuento = (valor_alquiler / 100) * p_descuento;
+    return descuento;
+end//
+
+DELIMITER ;
+
+select calcular_descuento(1000, 5) as Descuento; -- 1000 es el valor del alquiler y 5 es el descuento que se le aplicara
+
+-- 2. Crea una funcion que devuelva el nombre y el total de los clientes que no pagaron el alquiler a tiempo
+
+-- 3. Crea una funcion que calcule el total que deben pagar los clientes que se pasaron las fechas de alquileres
+
+-- 4. Crea una funcion que devuelva los vehiculos disponibles para alquilar
+
+-- 5. Crea una funcion que devuelva el alquiler mas caro que ha realizado un cliente
